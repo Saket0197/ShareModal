@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.wrapper {
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    position: relative;
+    min-height: 80%;
+    height: 80%;
+    width: 45%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.circles{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+
+.circle-1{
+    top: -7%;
+    left: -7%;
+    background-image: linear-gradient(-25deg, #d84869,#f46641);
+    box-shadow: 0px 0px 55px 15px #d84869;
+    animation: c1animate 7s linear infinite alternate;
+}
+
+.circle-2{
+    right: -7%;
+    bottom: -7%;
+    background-image: linear-gradient(-25deg, #5648d8, #8641f4);
+    box-shadow: 0px 0px 55px 15px #5648d8;
+    animation: c2animate 9s linear infinite alternate;
+}
+
+.profile-card{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, 0.123);
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(7px);
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+.profile-image{
+    height: 9.5rem;
+    width: 9.5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.123);
+}
+
+.profile-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.profile-description{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.856);
+}
+
+.btns{
+    display: flex;
+    font-size: 0.85rem;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 85%;
+    text-transform: capitalize;
+}
+
+.btn{
+    border: 0.15rem solid rgba(255, 255, 255, 0.658);
+    width: 45%;
+    padding: 0.7rem 0.85rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.9rem;
+}
+
+.btn-text{
+    color: rgba(255, 255, 255, 0.616);
+}
+
+.overlay{
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.226);
+    visibility: hidden;
+    transition: visibility 50ms linear 150ms;
+}
+
+.modal{
+    top: 25%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(255, 255, 255, 0.123);
+    height: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2rem;
+    padding: 0.45rem 1.75rem;
+    transform: scale(0,0);
+    z-index: 1;
+    transition: transform 250ms linear;
+}
+
+.modal-header{
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.modal-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.fa-solid.fa-xmark{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.options-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.options-heading{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.links-container{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icons-container{
+    height: 100%;
+    width: 14%;
+    border-radius: 50%;
+    position: relative;
+    transition-property: background-color;
+    transition: 400ms linear;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+    transition-property: color;
+    transition: 400ms linear;
+}
+
+.icon-1{
+    border: 1px solid #1771e6;
+}
+
+.icon-2{
+    border: 1px solid #1c99e6;
+    
+}
+
+.icon-3{
+    border: 1px solid #cb2770;
+}
+
+.icon-4{
+    border: 1px solid #2fe664;
+}
+
+.icon-5{
+    border: 1px solid #0081c2;
+}
+
+.icon-1 > i{
+    color: #1771e6;
+}
+
+.icon-2 > i{
+    color: #1c99e6;
+}
+
+.icon-3 > i{
+    color: #cb2770;
+}
+
+.icon-4 > i{
+    color: #2fe664;
+}
+
+.icon-5 > i{
+    color: #0081c2;
+}
+
+.icon-1:hover{
+    background-color: #1771e6;
+}
+
+.icon-2:hover{
+    background-color: #1c99e6;
+}
+
+.icon-3:hover{
+    background-color: #cb2770;
+}
+
+.icon-4:hover{
+    background-color: #2fe664;
+}
+
+.icon-5:hover{
+    background-color: #0081c2;
+}
+
+.icon-1:hover > i{
+    color: white;
+}
+
+.icon-2:hover > i{
+    color: white;
+}
+
+.icon-3:hover > i{
+    color: white;
+}
+
+.icon-4:hover > i{
+    color: white;
+}
+
+.icon-5:hover > i{
+    color: white;
+}
+
+
+
+@keyframes c1animate {
+    50%{
+        transform: translateX(1.75rem) translateY(-1.5rem) scale(0.9,0.9);
+    }
+}
+
+@keyframes c2animate {
+    50%{
+        transform: translateX(-1.75rem) translateY(1.5rem) scale(0.9,0.9);
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .container{
+        width: 62%;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .container{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+    }
+
+    .btns{
+        flex-direction: column;
+        gap: 1.75rem;
+        align-items: center;
+    }
+
+    .btn{
+        width: 65%;
+    }
+
+    .options-heading{
+        text-align: center;
+    }
+
+    .links-container{
+        padding: 1.5rem;
+        gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .btn{
+        width: 100%;
+    }
+
+    .modal-header{
+        gap: 2rem;
+    }
+
+    .icons{
+        font-size: 1.2rem;
+    }
+}
